@@ -20,7 +20,11 @@ const LocaleProvider = ({ messages, children, locale }: LocaleProvider) => {
     }, [locale])
 
     return (
-        <NextIntlClientProvider messages={messages} locale={locale} timeZone="UTC">
+        <NextIntlClientProvider
+            messages={messages}
+            locale={locale}
+            timeZone="UTC"
+        >
             {children}
         </NextIntlClientProvider>
     )
